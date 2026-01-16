@@ -8,6 +8,7 @@
       "classrooms": "Classrooms",
       "teachers": "Teachers",
       "add-teacher": "Add Teacher",
+      "add-classroom": "Add classroom",
       "login": "Login",
       "logout": "Logout"
     }
@@ -25,5 +26,20 @@
   "home": {
     "title": "Good luck with the exam!",
     "description": ""
+  },
+  "classroom": {
+    "title": "Add classroom",
+    "name": {
+      "label": "Name",
+      "required": "Name is required",
+      "placeholder": "Enter classroom name"
+    },
+    "button": "Add classroom",
+    "success": "Added classroom with name \"{{name}}\" and ID {{id}}",
+    "error": {
+      "exists": "Classroom with name \"{{name}}\" already exists.",
+      "unauthorized": "You must be logged in as an admin to access this page.",
+      "general": "Failed to add classroom. Please try again."
+    }
   }
 }

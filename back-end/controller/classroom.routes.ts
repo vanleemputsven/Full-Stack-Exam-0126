@@ -65,7 +65,12 @@ classroomRouter.post('/', async (req: Request, res: Response, next: NextFunction
         }
 
         const classroom = await classroomService.createClassroom(name.trim());
-        res.status(201).json(classroom);
+        res.status(201).json({
+            id: classroom.id,
+            name: classroom.name,
+            createdAt: classroom.createdAt,
+            updatedAt: classroom.updatedAt,
+        });
     } catch (error) {
         next(error);
     }
