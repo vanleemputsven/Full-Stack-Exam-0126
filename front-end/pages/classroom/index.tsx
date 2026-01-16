@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Head from 'next/head';
@@ -11,7 +10,6 @@ import { User, Classroom } from '@types';
 const ClassroomPage: React.FC = () => {
   const [loggedInUser, setLoggedInUser] = useState<User | null>(null);
   const [isLoading, setIsLoading] = useState(true);
-  const router = useRouter();
   const { t } = useTranslation();
 
   useEffect(() => {
@@ -57,7 +55,7 @@ const ClassroomPage: React.FC = () => {
         </Head>
         <Header />
         <main className="p-6 min-h-screen flex flex-col items-center">
-          <p>Loading...</p>
+          <p>{t('general.loading') || 'Loading...'}</p>
         </main>
       </>
     );
